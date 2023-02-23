@@ -1,2 +1,4 @@
-package examples.repository.infrastructure.messages;public class NotificationMessage {
+package examples.repository.infrastructure.messages;
+
+public class NotificationMessage {
 }
