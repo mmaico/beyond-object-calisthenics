@@ -1,0 +1,35 @@
+[
+  {
+    "scenario": "new advertence with all valid data",
+    "json": {
+      "_links": {
+        "applied-by": {
+          "href": "/directors/3"
+        },
+        "received": {
+          "href": "/students/1"
+        },
+        "class-of": {
+          "href": "/teachers/4"
+        }
+      }
+    }
+  },
+  {
+    "scenario": "payload with invalid student",
+    "json": {
+      "_links": {
+        "applied-by": {
+          "href": "/directors/3"
+        },
+        "received": {
+          "href": "/students/404"
+        },
+        "class-of": {
+          "href": "/teachers/4"
+        }
+      }
+    }
+  }
+
+]

@@ -1,0 +1,9 @@
+should create a new advertence=[
+{"_links":{"self":{"href":"/advertences/1"},"applied-by":{"href":"/directors/3"},"received":{"href":"/studants/1"},"class-of":{"href":"/teachers/4"}}}
+]
+
+
+
+should not save because the student not exist=[
+{"uri":"/advertences","errors":{"messages":[{"message":"Student is not found","code":400}]}}
+]
