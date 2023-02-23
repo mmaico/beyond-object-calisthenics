@@ -1,0 +1,1 @@
+package examples.repository.advertence.domain;
