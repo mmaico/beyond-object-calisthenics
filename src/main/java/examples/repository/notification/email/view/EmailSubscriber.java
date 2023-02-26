@@ -1,7 +1,7 @@
 package examples.repository.notification.email.view;
 
 import com.google.common.eventbus.Subscribe;
-import examples.repository.infrastructure.messages.EmailMessage;
+import examples.repository.infrastructure.messages.AdvertenceCreatedMessage;
 import examples.repository.notification.email.application.EmailFacade;
 import examples.repository.notification.email.domain.model.Email;
 import examples.repository.notification.email.domain.model.From;
@@ -18,12 +18,9 @@ public class EmailSubscriber {
     }
 
     @Subscribe
-    public void sendEmail(EmailMessage emailMessage) {
+    public void sendEmail(AdvertenceCreatedMessage message) {
         var email = new Email();
-        email.setFom(new From(emailMessage.getFrom()));
-        email.setTo(new To(emailMessage.getTo()));
-        email.setSubject(emailMessage.getSubject());
-        email.setTemplate(emailMessage.getTemplate());
+        //TODO montar o objeto de dominio a partir do message
 
         facade.send(email);
     }

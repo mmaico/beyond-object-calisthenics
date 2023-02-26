@@ -1,7 +1,7 @@
 package examples.repository.notification.system.view;
 
 import com.google.common.eventbus.Subscribe;
-import examples.repository.infrastructure.messages.NotificationMessage;
+import examples.repository.infrastructure.messages.AdvertenceCreatedMessage;
 import examples.repository.notification.system.application.NotificationFacade;
 import examples.repository.notification.system.domain.model.Notification;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ public class NotificationSubscriber {
     }
 
     @Subscribe
-    public void send(NotificationMessage notificationMessage) {
+    public void send(AdvertenceCreatedMessage message) {
         Notification notification = new Notification();
         //notificationMessage converter para notification
         facade.send(notification);
